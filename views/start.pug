@@ -1,0 +1,32 @@
+//Pantalla que muestra el juego en creado con sus jugadores
+    y tiene un formulario que permite ingresar las apuestas de los
+    jugadores e iniciar el juego.
+    @author Wendy Arcila
+
+html
+    head
+        title Dados
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+    body
+        h1= result
+        h1= ownid
+
+        form(role='form' method='POST' action='http://localhost:8080/startGame/'+id)
+            div.form-group
+                label(for='id') ID:
+                input#id.form-control(type='text', placeholder= ownid name='id')
+            div.form-group
+                label(for='type') Tipo:
+                input#type.form-control(type='text', placeholder='type' name='type')
+            div.form-group
+                label(for='gamer1')=gamer1
+                input#gamer1.form-control(type='text', name='gamerBet')
+            div.form-group
+                label(for='gamer2')=gamer2
+                input#gamer2.form-control(type='text', name='gamerBet')
+            div.form-group
+                label(for='gamer3')=gamer3
+                input#gamer3.form-control(type='text', name='gamerBet')
+
+            button.btn.btn-primary(type="submit", name="save", href='http://localhost:8080/startGame/'+id) Iniciar Juego

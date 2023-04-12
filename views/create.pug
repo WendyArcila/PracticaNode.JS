@@ -1,0 +1,17 @@
+//Pantalla que imprime la creación del juego
+    con botón que lleva a mostrar el juego y sus jugadores
+    @author Wendy Arcila
+html
+    head
+        title Dados
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+    body
+        h1= result
+        h2= id
+        form(method='GET' action='http://localhost:8080/game/'+id)
+            button.btn.btn-primary(type="submit", name="get", href='http://localhost:8080/game/'+id) Mostrar juego
+
+
+        a(class='button' href='http://localhost:8080/') Atrás
+

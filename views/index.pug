@@ -1,0 +1,32 @@
+//Pantalla que muestra la bienvenida y
+    un formulario que permite ingresar los datos para crear
+    un nuevo juego y crearlo.
+    @author Wendy Arcila
+
+
+html
+    head
+        meta(charset='utf-8')
+        title Dados
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+    body
+        h1= body
+
+        form(role='form' method='POST' action='http://localhost:8080/createGame')
+            div.form-group
+                label(for='id') ID:
+                input#id.form-control(type='text', placeholder='id' name='id')
+            div.form-group
+                label(for='type') Tipo:
+                input#type.form-control(type='text', placeholder='type' name='type')
+            div.form-group
+                label(for='gamer1') Jugador 1:
+                input#gamer1.form-control(type='text', placeholder='Fulano' name='gamers')
+            div.form-group
+                label(for='gamer2') Jugador 2:
+                input#gamer2.form-control(type='text', placeholder='Fulano' name='gamers')
+            div.form-group
+                label(for='gamer3') Jugador 3:
+                input#gamer3.form-control(type='text', placeholder='Fulano' name='gamers')
+            button.btn.btn-primary(type="submit", name="save", href='http://localhost:8080/createGame') Crear Juego
+
